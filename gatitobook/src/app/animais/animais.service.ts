@@ -1,5 +1,5 @@
 import { TokenService } from './../autenticacao/token.service';
-import { Animais } from './animais';
+import { Animais, Animal } from './animais';
 
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -20,5 +20,9 @@ export class AnimaisService {
     return this.http.get<Animais>(`${API}/${nomeDoUsuario}/photos`, {
       headers,
     });
+  }
+
+  buscaPorId(id: number): Observable<Animal> {
+    const token = this.tokenService.retornaToken();
   }
 }

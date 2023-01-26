@@ -21,6 +21,10 @@ export class AnimalComponent implements OnInit {
     }
   }
 
+  get url(): string {
+    return this.urlOriginal;
+  }
+
   constructor() {}
 
   ngOnInit(): void {}

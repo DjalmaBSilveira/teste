@@ -1,5 +1,6 @@
 {
   // VS Code
+  
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.labelFormat": "short",
   "workbench.colorTheme": "Tokyo Night Storm",
