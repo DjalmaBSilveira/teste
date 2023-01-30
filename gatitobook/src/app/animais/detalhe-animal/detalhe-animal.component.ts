@@ -22,7 +22,6 @@ export class DetalheAnimalComponent implements OnInit {
   ngOnInit(): void {
     this.animalId = this.activatedRoute.snapshot.params.animalId;
     this.animal$ = this.animaisService.buscaPorId(this.animalId);
-    this.animal$.subscribe((res) => console.log(res));
   }
 
   curtir() {
