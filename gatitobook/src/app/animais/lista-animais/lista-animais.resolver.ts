@@ -1,6 +1,3 @@
-import { switchMap, take } from 'rxjs/operators';
-import { UsuarioService } from './../../autenticacao/usuario/usuario.service';
-import { AnimaisService } from './../animais.service';
 import { Injectable } from '@angular/core';
 import {
   Router,
@@ -9,7 +6,10 @@ import {
   ActivatedRouteSnapshot,
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
+import { switchMap, take } from 'rxjs/operators';
+import { UsuarioService } from 'src/app/autenticacao/usuario/usuario.service';
 import { Animais } from '../animais';
+import { AnimaisService } from '../animais.service';
 
 @Injectable({
   providedIn: 'root',

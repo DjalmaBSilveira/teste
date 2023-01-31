@@ -1,10 +1,9 @@
-import { AnimaisService } from '../animais.service';
-
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { HttpEvent, HttpEventType } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { finalize } from 'rxjs/operators';
-import { HttpEvent, HttpEventType } from '@angular/common/http';
+import { AnimaisService } from '../animais.service';
 
 @Component({
   selector: 'app-novo-animal',
@@ -19,12 +18,12 @@ export class NovoAnimalComponent implements OnInit {
 
   constructor(
     private animaisService: AnimaisService,
-    private formBuilder: FormBuilder,
+    private formbuilder: FormBuilder,
     private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.formularioAnimal = this.formBuilder.group({
+    this.formularioAnimal = this.formbuilder.group({
       file: ['', Validators.required],
       description: ['', Validators.maxLength(300)],
       allowComments: [true],

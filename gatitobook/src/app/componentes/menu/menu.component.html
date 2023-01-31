@@ -3,9 +3,11 @@
     <i
       class="fa fa-window-close"
       (click)="abreMenu()"
-      (keyUp.space)="abreMenu()"
-    ></i>
+      (keyup.space)="abreMenu()"
+    >
+    </i>
     <ng-content></ng-content>
   </div>
+
   <div class="overlay" (click)="abreMenu()"></div>
 </div>

@@ -1,4 +1,3 @@
-import { UsuarioService } from './usuario/usuario.service';
 import { Injectable } from '@angular/core';
 import {
   CanLoad,
@@ -10,6 +9,7 @@ import {
   Router,
 } from '@angular/router';
 import { Observable } from 'rxjs';
+import { UsuarioService } from './usuario/usuario.service';
 
 @Injectable({
   providedIn: 'root',
@@ -29,6 +29,7 @@ export class LoginGuard implements CanLoad {
       this.router.navigate(['animais']);
       return false;
     }
+
     return true;
   }
 }
